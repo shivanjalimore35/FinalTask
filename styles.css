@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #d3c8f7;
+    overflow: hidden;
+     /* Hide scrollbars */
+
+  }
+  .navbar
+  {
+    
+    background-color: rgb(180, 135, 242);
+    /* color:#A5823C; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 20px; */
+  }
+  .navbar-logo>img
+  {
+    height: 100px;
+    width: 130px;
+  }
+  .container {
+    display: flex;
+    height: 100vh; /* Adjust as needed */
+    width: 100vw;
+
+  }
+
+  .left-section {
+    flex: 1;
+    padding: 20px;
+    /* background-color: white; */
+    /* padding: 20px; Adjust background color */
+  }
+
+  /* .right-section {
+    flex: 1;
+    /* background-color:white;  */
+    /* padding: 20px;Adjust background color */
+  /* } */ 
+
+  /* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  } */
+  
+  h1 {
+    text-align: center;
+    color: #19063d;
+    text-size-adjust: 10px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .completed {
+    color: green;
+}
+.in-progress {
+    color: blue;
+}
+.canceled {
+    color: red;
+}
+.due-pass {
+    color: orange;
+}
+  
+  button:hover {
+    background-color: #5da7f5;
+  }
+.mandatory
+{
+    color: red;
+}
+.mandatory-message {
+    display: none;
+    color: red;
+}
+  
+  .task-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #b55d5d;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+  }
+  
+  .task-item h2 {
+    margin-top: 0;
+    color: #080808;
+  }
+ /* Styling for the table section */
+.table-section {
+  flex: 2;
+  /* margin-top: 20px; */
+  padding: 20px;
+  border: 1px solid #b8adadf0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #d3c8f7;
+  /* overflow-x: auto; */
+  width: 80px;
+}
+
+/* Styling for the table */
+#taskTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Styling for table headers */
+#taskTable th {
+  background-color: #9093ea;
+  border: 1px solid #08188f;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styling for table rows */
+#taskTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Add alternating row background color for better readability */
+#taskTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table th{
+  background-color:  blue;
+  padding:10px;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* Style for the search dropdown */
+.search {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #080808;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+.search option{
+  font-weight: 600;
+  font-size: 14px;
+}
+/* Style for the search input field */
+.searchfield{
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+/* Style for the search buttons */
+.search-btn {
+  /* padding: 8px 16px; */
+  font-size: 16px;
+  background-color: #0a440a;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Add margin between search buttons */
+.search-btn + .search-btn {
+  margin-left: 10px;
+}
+.edit-button {
+  background-color: green;
+  color: white;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+.tr 
+{
+  text-size-adjust: 16px;
+  background-color: #b55d5d;
+  color: #19063d;
+}
+
+.task-button{
+  display: flex;
+  flex-direction: column;
+  gap:6px;
+}

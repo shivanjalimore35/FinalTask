@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Task Management System</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="Images/Logo/logo.png" alt="Logo" />
+      </div>
+      <div class="search-box">
+        <select name="search" id="search" class="search">
+          <option value="Search By" style="display: none">Search By</option>
+          <option value="main Task Name">main task Name</option>
+          <option value="Subtask Name">sub task Name</option>
+          <option value="start Date">Start Date</option>
+          <option value="End Date">End Date</option>
+          <option value="status">status</option>
+        </select>
+
+        <input
+          type="text"
+          class="searchfield"
+          style="padding: 9px; margin-right: 15px"
+          id="search-field"
+        />
+
+        <button id="search-btn" class="search-btn" onclick="search()">
+          Search
+        </button>
+      </div>
+      <!-- <div class="navbar-buttons"> -->
+      <!-- <button id="addTaskBtn">Add Task</button>
+          <button id="viewTaskBtn">View Task</button> -->
+      <!-- </div> -->
+    </nav>
+    <div class="container">
+      <div class="left-section">
+        <!-- <h1>Task Management System</h1> -->
+        <form id="taskForm">
+          <label for="taskId">Task ID<span class="mandatory">*</span>:</label>
+          <input type="number" id="taskId" required />
+
+          <label for="taskName"
+            >Task Name<span class="mandatory">*</span>:</label
+          >
+          <input type="text" id="taskName" required />
+          <!-- subtask button added -->
+
+          <label for="startDate"
+            >Start Date<span class="mandatory">*</span>:</label
+          >
+          <input type="date" id="startDate" required />
+
+          <label for="endDate">End Date<span class="mandatory">*</span>:</label>
+          <input type="date" id="endDate" required />
+
+          <label for="status"
+            >Task Completion Status<span class="mandatory">*</span>:</label
+          >
+          <select id="status" required>
+            <option value="completed">Completed</option>
+            <option value="inProgress">In Progress</option>
+            <option value="cancel">Cancel</option>
+            <option value="duePass">Due Pass</option>
+          </select>
+          <button type="button" id="addTask">Add Task</button>
+          <!-- <button type="button" id="addSubtaskBtn">Add Subtask</button>  -->
+          <button type="button" id="resettask" onclick="resetForm()">
+            Reset
+          </button>
+        </form>
+        <!-- <div id="taskList"></div> -->
+        <!-- <div class="right-section"> -->
+      <div id="subtaskForm" style="display: none">
+        <!-- <div id="subtaskForm" style="display: none;"> -->
+        <h2>Add Subtask</h2>
+        <form id="subtaskFormFields">
+          <label for="subtaskId">Subtask ID:</label>
+          <input type="text" id="subtaskId" readonly />
+
+          <label for="subtaskName"
+            >Sub-task Name<span class="mandatory">*</span>:</label
+          >
+          <input type="text" id="subtaskName" required />
+
+          <label for="subtaskStartDate"
+            >Start Date<span class="mandatory">*</span>:</label
+          >
+          <input type="date" id="subtaskStartDate" required />
+
+          <label for="subtaskEndDate"
+            >End Date<span class="mandatory">*</span>:</label
+          >
+          <input type="date" id="subtaskEndDate" required />
+
+          <label for="subtaskStatus"
+            >Sub-task Completion Status<span class="mandatory">*</span>:</label
+          >
+          <select id="subtaskStatus" required>
+            <option value="completed">Completed</option>
+            <option value="inProgress">In Progress</option>
+            <option value="cancel">Cancel</option>
+            <option value="duePass">Due Pass</option>
+          </select>
+
+          <button
+            type="button"
+            id="submitSubtask"
+            onclick="submitsubtask(subtaskId)"
+          >
+            Submit Subtask
+          </button>
+          <button type="button" id="cancelSubtask">Cancel</button>
+        </form>
+      </div>
+      <!-- </div> -->
+      
+      </div>
+      
+      <div class="table-section">
+        <table id="taskTable">
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="calender.js"></script>
+    <script src="calender-subtask.js"></script>
+    <script src="display.js"></script>
+    
+  </body>
+</html>
